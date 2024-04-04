@@ -1,7 +1,9 @@
 COMPILER=g++
 INCLUDE=-Iinclude
 
-BIN=bin/student
+BINDIR=bin
+OBJ=student
+BIN=$(BINDIR)/$(OBJ)
 SRCDIR=src
 SRC=$(SRCDIR)/*.cpp
 
@@ -12,4 +14,4 @@ run:
 	./$(BIN)
 
 remove:
-	rm $(bin)
+	rm -f $(BIN)
