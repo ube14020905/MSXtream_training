@@ -13,10 +13,11 @@ void client::start() {
         int bytesSent = sendData(msg);
         if (bytesSent > 0) {
             std::cout << "Message sent" << std::endl;
-            std::string response;
-            int bytesRead = readLine(response);
+            char buffer[1024];
+            int bytesRead = recv(this->getDescriptor(), buffer, sizeof(buffer), 0);
+            std::cout<<bytesRead<<std::endl;
             if (bytesRead > 0) {
-                std::cout << "Received from server: " << response << std::endl;
+                std::cout << "Received from server: " << buffer << std::endl;
             } else {
                 std::cerr << "Error receiving response from server" << std::endl;
             }
