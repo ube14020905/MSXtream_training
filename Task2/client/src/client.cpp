@@ -1,26 +1,29 @@
 #include "client.h"
 
-client::client(std::string ip,int port){
-	TCPClient(ip,port);
-}
-void client::start(){
-	std::string msg;
-	std::cout<<"Enter a message or(type 'exit' to exit) : ";
-	while(true){
-		std::cin>>msg;
-		if(msg=="exit"){
-			break;
-		}
-		int bytes=sendData(msg);
-		if(bytes > 0){
-			std::cout<<"msg sent"<<endl;
-		}
-		bytes=readLine(msg);
-		if(bytes > 0)
-		{
-			std::cout<<"Received from server: "<<msg<<endl;
-		}
-	}
+client::client(std::string ip, int port) : TCPClient(ip, port) {}
+
+void client::start() {
+    std::string msg;
+    while (true) {
+        std::cout << "Enter a message or (type 'exit' to exit): ";
+        std::getline(std::cin, msg);
+        if (msg == "exit") {
+            break;
+        }
+        int bytesSent = sendData(msg);
+        if (bytesSent > 0) {
+            std::cout << "Message sent" << std::endl;
+            std::string response;
+            int bytesRead = readLine(response);
+            if (bytesRead > 0) {
+                std::cout << "Received from server: " << response << std::endl;
+            } else {
+                std::cerr << "Error receiving response from server" << std::endl;
+            }
+        } else {
+            std::cerr << "Error sending message" << std::endl;
+        }
+    }
 }
 
-client::~client(){}
+client::~client() {}

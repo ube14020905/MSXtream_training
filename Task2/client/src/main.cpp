@@ -1,7 +1,10 @@
 #include "client.h"
 
 int main(){
-	client clnt("localhost",8080);
+	client clnt("127.0.0.1",8080);
+	while (true)
+	{
 	clnt.start();
+	}
 	return 0;
 }
