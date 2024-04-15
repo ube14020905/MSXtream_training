@@ -1,32 +1,31 @@
-#include "json_app.h"
-
+#include<jsonapp/json_app.h>
+using namespace std;
 int main(int argc, char* argv[]) {
     if (argc != 2) {
-        std::cerr << "Usage: " << argv[0] << " <JSON_file>" << std::endl;
+        cerr << "Usage: " << argv[0] << " <JSON_file>" << endl;
         return 1;
     }
 
     JsonApp app(argv[1]);
 
     while (true) {
-        std::string choice;
-        std::cout << "Enter 'id' to display info or 'app' to display app details ('exit' to quit): ";
-        std::getline(std::cin, choice);
-
-        switch (hash(choice.c_str())) {
-            case hash("id"):
+        int choice;
+        cout << "Enter '1' to display info or '2' to display app details 0 for exit: ";
+        cin>>choice;
+        switch (choice) {
+            case 1:
                 app.searchId();
                 break;
-            case hash("app"):
-                app.searchApp();
+            case 2:
+                app.DisplayApps();
                 break;
-            case hash("exit"):
+            case 0:
                 return 0;
             default:
-                std::cerr << "Error: invalid choice" << std::endl;
+                cerr << "Error: invalid choice" << endl;
                 break;
         }
     }
 
     return 0;
-}
+}  
