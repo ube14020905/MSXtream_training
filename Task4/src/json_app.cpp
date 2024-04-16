@@ -26,11 +26,6 @@ void JsonApp::searchId() {
         cerr << "No info found in the JSON file." << endl;
         return;
     }
-    cout << "Available info:" << endl;
-    for (size_t i = 0; i < info.size(); ++i) {
-        JsonObject infoObj = info[i];
-        printById(infoObj);
-    }
     cout << "Enter the key or 'all' for printing all ids: ";
     string key;
     cin >> key;
@@ -43,7 +38,7 @@ void JsonApp::searchId() {
         bool keyFound = false;
         for (size_t i = 0; i < info.size(); ++i) {
             JsonObject infoObj = info[i];
-            if (key == infoObj["key"].toString()) {
+            if (key == infoObj["key"]) {
                 printById(infoObj);
                 keyFound = true;
                 break;
