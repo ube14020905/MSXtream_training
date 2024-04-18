@@ -1,0 +1,167 @@
+{
+  "app": [
+    {
+      "key": "membershipDetail",
+      "value": "https://laemobapp.angelbroking.com/app/membership.html"
+    },
+    {
+      "key": "faqURL",
+      "value": "https://www.angelbroking.com/faq/index.html"
+    },
+    {
+      "key": "LoginfaqURL",
+      "value": "https://www.angelbroking.com/faq/index.html"
+    },
+    {
+      "key": "termsCondition",
+      "value": "https://mobaelinx.angelbroking.com/app/termsandconditional.html"
+    },
+    {
+      "key": "pledgetermsCondition",
+      "value": "https://laemobapp.angelbroking.com/app/pledgetermsandconditions.html"
+    },
+    {
+      "key": "openAccount",
+      "value": "https://onlineuat.angelbroking.com"
+    },
+    {
+      "key": "gtttermsCondition",
+      "value": "https://mobaelinx.angelbroking.com/app/gtttermsandconditions.html"
+    }
+  ],
+  "info": [
+    {
+      "key": "EL0001",
+      "value": {
+        "action": "50",
+        "msg": "Unable to connect."
+      }
+    },
+    {
+      "key": "EL0002",
+      "value": {
+        "action": "50",
+        "msg": "Unable to connect."
+      }
+    },
+    {
+      "key": "EL0003",
+      "value": {
+        "action": "50",
+        "msg": "Unable to connect."
+      }
+    },
+    {
+      "key": "EL0004",
+      "value": {
+        "action": "50",
+        "msg": "Unable to connect."
+      }
+    },
+    {
+      "key": "EL0005",
+      "value": {
+        "action": "50",
+        "msg": "Unable to connect."
+      }
+    },
+    {
+      "key": "EL0006",
+      "value": {
+        "action": "50",
+        "msg": "Unable to connect."
+      }
+    },
+    {
+      "key": "EL0007",
+      "value": {
+        "action": "50",
+        "msg": "Invalid AppID."
+      }
+    },
+    {
+      "key": "EL0008",
+      "value": {
+        "action": "50",
+        "msg": "Unable to connect."
+      }
+    },
+    {
+      "key": "EL0009",
+      "value": {
+        "action": "50",
+        "msg": "Invalid Session."
+      }
+    },
+    {
+      "key": "EL0010",
+      "value": {
+        "action": "50",
+        "msg": "Your session has expired."
+      }
+    },
+    {
+      "key": "EL0011",
+      "value": {
+        "action": "50",
+        "msg": "Invalid Password Length."
+      }
+    },
+    {
+      "key": "EL0012",
+      "value": {
+        "action": "50",
+        "msg": "Account Validation Failed."
+      }
+    },
+    {
+      "key": "EL0013",
+      "value": {
+        "action": "50",
+        "msg": "No Data Available."
+      }
+    },
+    {
+      "key": "EL0014",
+      "value": {
+        "action": "50",
+        "msg": "Unable to connect."
+      }
+    },
+    {
+      "key": "EL0015",
+      "value": {
+        "action": "50",
+        "msg": "Unable to connect."
+      }
+    },
+    {
+      "key": "EL0016",
+      "value": {
+        "action": "50",
+        "msg": "Unable to connect."
+      }
+    },
+    {
+      "key": "EL0017",
+      "value": {
+        "action": "50",
+        "msg": "Invalid Request Parameter."
+      }
+    },
+    {
+      "key": "EL0018",
+      "value": {
+        "action": "52",
+        "msg": "No Data Available."
+      }
+    },
+    {
+      "key": "EL0019",
+      "value": {
+        "action": "54",
+        "msg": "No Data Available."
+      }
+    }
+  ]
+}

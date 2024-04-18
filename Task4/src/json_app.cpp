@@ -6,6 +6,10 @@ JsonApp::JsonApp(const string& path) : path(path) {
 
 JsonApp::~JsonApp() {}
 
+JsonObject JsonApp::getObject(){
+        return object;
+}
+
 void JsonApp::readJson() {
     ifstream file(path);
     if (!file.is_open()) {

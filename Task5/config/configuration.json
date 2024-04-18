@@ -1,0 +1,23 @@
+{
+	"httpServer": {
+	  "port": 8080,
+	  "endUrl": "/content",
+	  "load": 1
+	},
+	"Response_onInvalidJson": {
+	  "infoid": "ER101",
+	  "infomsg": "Invalid JSON format",
+	  "svcName": "HttpWebServer",
+	  "svcGroup": "Languageservice"
+	},
+	"Response_onPostProcessRequest": {
+	  "infoid": "ER102",
+	  "infomsg": "Content NOT FOUND",
+	  "key": "content",
+	  "value1": "all",
+	  "value2": "app",
+	  "value3": "info",
+	  "svcName": "HttpWebServer",
+	  "svcGroup": "AppService"
+	}
+}

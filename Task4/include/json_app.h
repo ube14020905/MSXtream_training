@@ -1,7 +1,7 @@
 #ifndef JSON_APP_H
 #define JSON_APP_H
 
-#include "jsonparser/JsonParser.h"
+#include <jsonparser/JsonParser.h>
 #include <iostream>
 #include <fstream>
 
@@ -22,6 +22,8 @@ private:
 public:
     JsonApp(const string& path);
 
+    JsonObject getObject();
+    
     ~JsonApp();
 
     void searchId();
