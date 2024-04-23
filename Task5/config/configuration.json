@@ -1,14 +1,15 @@
 {
 	"httpServer": {
-	  "port": 8080,
-	  "endUrl": "/content",
-	  "load": 1
+	  "port": "8080",
+	  "load": "1",
+	  "svcName": "Base",
+	  "svcGroup": "Config",
+	  "svcVersion": "1.0.0",
+	  "endUrl": "/Config/Base/1.0.0"
 	},
 	"Response_onInvalidJson": {
 	  "infoid": "ER101",
-	  "infomsg": "Invalid JSON format",
-	  "svcName": "HttpWebServer",
-	  "svcGroup": "Languageservice"
+	  "infomsg": "Invalid JSON format"
 	},
 	"Response_onPostProcessRequest": {
 	  "infoid": "ER102",
@@ -16,8 +17,6 @@
 	  "key": "content",
 	  "value1": "all",
 	  "value2": "app",
-	  "value3": "info",
-	  "svcName": "HttpWebServer",
-	  "svcGroup": "AppService"
+	  "value3": "info"
 	}
 }

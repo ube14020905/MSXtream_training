@@ -21,8 +21,9 @@ void httpjson::onInvalidJSONRequest(HTTPServerRequest *request, HTTPConnection *
 	err->addToData("error", errmsg);
 	err->setInfoID(infoid);
 	err->setInfoMsg(infomsg);
-	err->setSvcName(configObj["Response_onInvalidJson"]["svcName"]);
-	err->setSvcGroup(configObj["Response_onInvalidJson"]["svcGroup"]);
+	err->setSvcName(configObj["httpServer"]["svcName"]);
+	err->setSvcGroup(configObj["httpServer"]["svcGroup"]);
+    err->setSvcVersion(configObj["httpServer"]["svcVersion"]);
 	sendResponse(err, connection);
 	connection->release();
 }
@@ -58,8 +59,10 @@ void httpjson::onPostProcessRequest(MSFRequest *msfRequest, MSFResponse *msfResp
             msfResponse->setInfoMsg(infomsg);
         }
     } 
-    msfResponse->setSvcName(configObj["Response_onPostProcessRequest"]["svcName"]);
-    msfResponse->setSvcGroup(configObj["Response_onPostProcessRequest"]["svcGroup"]);
+    msfResponse->setSvcName(configObj["httpServer"]["svcName"]);
+    msfResponse->setSvcGroup(configObj["httpServer"]["svcGroup"]);
+    msfResponse->setSvcVersion(configObj["httpServer"]["svcVersion"]);
+
     cout << msfResponse->toString() << endl;
     sendResponse(msfResponse, connection);
     connection->release();

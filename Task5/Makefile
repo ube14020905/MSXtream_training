@@ -8,13 +8,16 @@ BINDIR=bin
 SRC=$(SRCDIR)/*.cpp
 BIN=$(BINDIR)/httpserver
 CONFIGDIR=config
+CONFIG=$(CONFIGDIR)/configuration.json
 JSON=app_info.json
 
 all:
 	$(COMPILER) $(CPPFLAGS) -o $(BIN) $(SRC) $(INCLUDE) $(LIBS)
 
 run:
-	./$(BIN) $(CONFIGDIR)/$(JSON)
+	./$(BIN) $(CONFIGDIR)/$(JSON) $(CONFIG)
 
+debug:
+	gdb run
 remove:
 	rm -f $(BINDIR)/*
