@@ -11,6 +11,7 @@ INCLUDE = -Iinclude
 BIN=bin
 SRC=$(SRCDIR)/*.cpp
 OBJ=$(BIN)/$(OBJ_NAME)
+TEST=test
 
 all:
 	$(CPP) $(SRC) $(INCLUDE) $(CPPFLAGS) $(LIBS) -o $(OBJ)
@@ -27,3 +28,9 @@ install: install-bin install-dev
 
 clean:
 	rm -f $(BIN)/*
+
+test:
+	$(CPP) -o$(BIN)/sample $(TEST)/*.cpp -l:libmyjsonapp.so.0.1.4
+
+run:
+	./$(BIN)/sample config/app_info.json

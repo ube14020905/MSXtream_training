@@ -9,13 +9,13 @@ SRC=$(SRCDIR)/*.cpp
 BIN=$(BINDIR)/httpserver
 CONFIGDIR=config
 CONFIG=$(CONFIGDIR)/configuration.json
-JSON=app_info.json
+JSON=$(CONFIGDIR)/app_info.json
 
 all:
 	$(COMPILER) $(CPPFLAGS) -o $(BIN) $(SRC) $(INCLUDE) $(LIBS)
 
 run:
-	./$(BIN) $(CONFIGDIR)/$(JSON) $(CONFIG)
+	./$(BIN) $(JSON) $(CONFIG)
 
 debug:
 	gdb run
