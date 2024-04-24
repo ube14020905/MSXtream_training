@@ -1,3 +1,4 @@
+
 COMPILER=g++
 CPPFLAGS= -g -Wall
 LIBS= -l:libubacsbu2webapp.so.1.5.6 -l:libmyjsonapp.so.0.1.4 -l:libubacipc.so.1.4.4 -l:libubacjsonparser.so.1.2.8
@@ -15,9 +16,9 @@ all:
 	$(COMPILER) $(CPPFLAGS) -o $(BIN) $(SRC) $(INCLUDE) $(LIBS)
 
 run:
-	./$(BIN) $(JSON) $(CONFIG)
+	./$(BIN) $(CONFIG)
 
 debug:
 	gdb run
 remove:
-	rm -f $(BINDIR)/*
+	rm -f $(BINDIR)/*.

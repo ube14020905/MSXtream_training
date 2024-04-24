@@ -29,7 +29,7 @@ install: install-bin install-dev
 clean:
 	rm -f $(BIN)/*
 
-test:
+tst:
 	$(CPP) -o$(BIN)/sample $(TEST)/*.cpp -l:libmyjsonapp.so.0.1.4
 
 run:

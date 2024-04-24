@@ -1,4 +1,5 @@
 {
+	"src":"config/app_info.json",
 	"httpServer": {
 	  "port": "8080",
 	  "load": "1",
@@ -8,13 +9,13 @@
 	  "endUrl": "/Config/Base/1.0.0"
 	},
 	"Response_onInvalidJson": {
-	  "infoid": "ER101",
+	  "infoID": "ER101",
 	  "infomsg": "Invalid JSON format"
 	},
 	"Response_onPostProcessRequest": {
 	  "infoid": "ER102",
-	  "infomsg": "Content NOT FOUND",
-	  "key": "content",
+	  "infomsg": "Data NOT FOUND",
+	  "key": "data",
 	  "value1": "all",
 	  "value2": "app",
 	  "value3": "info"

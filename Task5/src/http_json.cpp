@@ -13,7 +13,7 @@ httpjson::~httpjson(){
 void httpjson::onInvalidJSONRequest(HTTPServerRequest *request, HTTPConnection *connection, string &rawRequest){
 	cerr << "Request Received: " << rawRequest << endl;
 	string infoid,infomsg;
-	infoid = configObj["Response_onInvaidJson"]["infoid"];
+	infoid = configObj["Response_onInvalidJson"]["infoID"];
 	infomsg = configObj["Response_onInvalidJson"]["infomsg"];
 	MSFRequest* msfreq = new MSFRequest(rawRequest);
 	MSFResponse* err = new MSFResponse(msfreq);
@@ -51,7 +51,7 @@ void httpjson::onPostProcessRequest(MSFRequest *msfRequest, MSFResponse *msfResp
             cout << requestObject.toString() << endl;
         }
         else {
-        cerr << "Invalid content value." << endl;
+        cerr << "Invalid data value." << endl;
 	    string infoid = configObj["Response_onPostProcessRequest"]["infoid"];
 	    string infomsg = configObj["Response_onPostProcessRequest"]["infomsg"];
 
